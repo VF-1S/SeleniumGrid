@@ -1,0 +1,1 @@
+java -Dselenium.LOGGER.level=OFF -jar -Dwebdriver.edge.driver=%EDGE% -Dwebdriver.firefox.bin=%FIREFOX% -Dwebdriver.chrome.driver=%CHROME% -Dwebdriver.gecko.driver=%GECKO% -Dwebdriver.ie.bin=%IE32% -Dwebdriver.ie.driver=%IE% %SELENIUM% -role node -port %PORT% -nodeConfig %BROWSERS%

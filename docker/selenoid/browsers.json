@@ -1,0 +1,97 @@
+{
+    "chrome": {
+        "default": "92",
+        "versions": {
+            "92": {
+                "image": "selenoid/chrome:92.0",
+                "port": "4444",
+                "path": "/",
+                "hosts" : ["cdn.pendo.io:0.0.0.0","app.pendo.io:0.0.0.0"],
+				"env": ["SCREEN_RESOLUTION=1920x1080x24"]
+            },
+			"91": {
+                "image": "selenoid/chrome:91.0",
+                "port": "4444",
+                "path": "/",
+				"hosts" : ["cdn.pendo.io:0.0.0.0","app.pendo.io:0.0.0.0"],
+				"env": ["SCREEN_RESOLUTION=1920x1080x24"]
+            },
+			"90": {
+                "image": "selenoid/chrome:90.0",
+                "port": "4444",
+                "path": "/",
+                "hosts" : ["cdn.pendo.io:0.0.0.0","app.pendo.io:0.0.0.0"],
+				"env": ["SCREEN_RESOLUTION=1920x1080x24"]
+            }
+        }
+    },
+    "firefox": {
+        "default": "91",
+        "versions": {
+            "91": {
+                "image": "selenoid/firefox:91.0",
+                "port": "4444",
+                "path": "/wd/hub",
+                "hosts" : ["cdn.pendo.io:0.0.0.0","app.pendo.io:0.0.0.0"],
+				"env": ["SCREEN_RESOLUTION=1920x1080x24"]
+            },
+			"90": {
+                "image": "selenoid/firefox:90.0",
+                "port": "4444",
+                "path": "/wd/hub",
+                "hosts" : ["cdn.pendo.io:0.0.0.0","app.pendo.io:0.0.0.0"],
+				"env": ["SCREEN_RESOLUTION=1920x1080x24"]
+            },
+			"89": {
+                "image": "selenoid/firefox:89.0",
+                "port": "4444",
+                "path": "/wd/hub",
+                "hosts" : ["cdn.pendo.io:0.0.0.0","app.pendo.io:0.0.0.0"],
+				"env": ["SCREEN_RESOLUTION=1920x1080x24"]
+            }
+        }
+    },
+    "MicrosoftEdge": {
+        "default": "93",
+        "versions": {
+            "93": {
+                "image": "browsers/edge:93.0",
+                "port": "4444",
+                "path": "/",
+                "hosts" : ["cdn.pendo.io:0.0.0.0","app.pendo.io:0.0.0.0"],
+				"env": ["SCREEN_RESOLUTION=1920x1080x24"]
+            },
+            "92": {
+                "image": "browsers/edge:92.0",
+                "port": "4444",
+                "path": "/",
+                "hosts" : ["cdn.pendo.io:0.0.0.0","app.pendo.io:0.0.0.0"],
+				"env": ["SCREEN_RESOLUTION=1920x1080x24"]
+            }
+        }
+    },
+    "opera": {
+        "default": "77",
+        "versions": {
+            "77": {
+                "image": "selenoid/opera:77.0",
+                "port": "4444",
+                "path": "/",
+                "hosts" : ["cdn.pendo.io:0.0.0.0","app.pendo.io:0.0.0.0"],
+				"env": ["SCREEN_RESOLUTION=1920x1080x24"]
+            }
+        }
+    },
+	"safari": {
+        "default": "14",
+        "versions": {
+            "14": {
+                "image": "browsers/safari:14.0",
+                "port": "4444",
+                "path": "/",
+                "hosts" : ["cdn.pendo.io:0.0.0.0","app.pendo.io:0.0.0.0"],
+				"env": ["SCREEN_RESOLUTION=1920x1080x24"]
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+version: '3'
+
+#networks:
+#  default:
+#    external:
+#      name: selenoid_network
+
+services:
+
+  nginx:
+    image: nginx:stable-alpine
+    depends_on:
+    - ggr
+    ports:
+    - 4444:4444
+    restart: unless-stopped
+    volumes:
+    - ./nginx/conf.d/ggr.conf:/etc/nginx/conf.d/ggr.conf:ro
+
+  ggr:
+    image: aerokube/ggr:latest-release
+    ports:
+    - 5555
+    restart: unless-stopped
+    volumes:
+    - ./grid-router:/etc/grid-router:ro
+    command: ["-listen", ":5555", "-quotaDir", "/etc/grid-router/quota", "-guests-quota", "test", "-guests-allowed"]

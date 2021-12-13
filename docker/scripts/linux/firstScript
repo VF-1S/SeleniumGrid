@@ -1,0 +1,3 @@
+#clonning repo
+git clone **GIT_URL** /tmp/seleniumgrid
+ln -s /tmp/seleniumgrid seleniumgrid

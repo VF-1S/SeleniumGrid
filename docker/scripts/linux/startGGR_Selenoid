@@ -1,0 +1,27 @@
+#Stop & remove containers
+docker rm -f $(docker ps -f name=ggr -q)
+docker rm -f $(docker ps -f name=selenoid -q)
+
+#Remove network
+docker network rm selenoid_network
+
+#Create network
+docker network create selenoid_network
+
+#up containers
+cd selenoid
+docker-compose up -d
+
+cd ../..
+cd ggr
+docker-compose up -d
+
+#add selenoid to selenoid_network
+docker network connect selenoid_network $(docker ps -f name=selenoid_selenoid_ -q)
+
+
+
+
+
+
+

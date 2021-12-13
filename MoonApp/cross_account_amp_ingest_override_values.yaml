@@ -1,0 +1,21 @@
+replicaExternalLabelName: __replica__
+externalLabels:
+  cluster: lii-at-eks
+serviceAccounts:
+    server:
+        name: "amp-iamproxy-ingest-service-account"
+        annotations:
+            eks.amazonaws.com/role-arn: arn:aws:iam::XXXXXXXXXXX:role/EKS-AMP-ServiceAccount-Role
+server:
+    remoteWrite:
+      -
+        url: https://aps-workspaces.my-zone.amazonaws.com/workspaces/ws-XXXX-xxx-XXXXX-XXXX-XXX/api/v1/remote_write
+        queue_config:
+            max_samples_per_send: 1000
+            max_shards: 200
+            capacity: 2500
+        sigv4:
+            region: us-east-1
+            role_arn: arn:aws:iam::XXXXXXXXX:role/Central-EKS-AMP-ServiceAccount-Role
+    statefulSet:
+        enabled: "true"

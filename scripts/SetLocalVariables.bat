@@ -1,0 +1,1 @@
+SET HUB=http://localhost:4444/grid/register
