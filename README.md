@@ -16,7 +16,7 @@ For more information about Selenium Grid please visit their [official documentat
 # ** Selenium Server Standalone
 For those who want to use Selenium Grid immediately with any kind of preparation and installation then _Selenium Server Standalone_ is a good option.
 
-##**1. Before you run Selenium Server Standalone**
+**1. Before you run Selenium Server Standalone**
 * Since it is a .jar it is required to have installed and configured Java Runtime Environment (JRE) on your OS.
 * **Port 4444 must be available for _localhost_ !!** For example: Selenium Server Standalone can not run in parallel with Selenoid because both of them are using port 4444. The expected exception in this case should look like:
 
@@ -29,7 +29,7 @@ Exception in thread "main" java.lang.RuntimeException: java.net.BindException: A
             ...
 ```
 
-##**2. Run Selenium Server Standalone on Windows**
+**2. Run Selenium Server Standalone on Windows**
 
 On the root of this project find and run "localhost.bat" where you will have at the bottom of new opened cmd window this:
 
@@ -41,7 +41,7 @@ Another conformation that Selenium server is operational you can get by visiting
 
 ![Alt text](https://github.com/VF-1S/SeleniumGrid/blob/main/images/ReadmeImages/ConsoleGrid_preview.png "Grid Console")
 
-##**3. Run Selenium Server Standalone on Linux**
+**3. Run Selenium Server Standalone on Linux**
 
 To run Selenium Server Standalone on Linux OS you have to clone this project and execute the following command on the project's root:
 
@@ -49,7 +49,7 @@ To run Selenium Server Standalone on Linux OS you have to clone this project and
 
 Use the same confirmation as for Windows to see if server is running.
 
-##**4. Selenium Server Standalone custom Configuration**
+**4. Selenium Server Standalone custom Configuration**
 - **Change Browser Version (for example MicrosoftEdge)**
 
     I. Download appropriate version of _msedgedriver.exe_ and put it in `./MicrosoftWebDriver/driver_version/`
@@ -104,7 +104,7 @@ For those who want to use containerized Selenium Grid combined with Docker and d
 
 **Please Note: Detailed instructions how to use Selenoid you can find in [Selenoid Docs](https://aerokube.com/selenoid/latest/).**
 
-##**1. Before you run Selenoid**
+**1. Before you run Selenoid**
 
 It is required Docker for Desktop to be installed for Windows ( [check here](https://www.docker.com/products/docker-desktop) ) or Docker Engine on Ubuntu by following [instructions here](https://docs.docker.com/engine/install/ubuntu/).
  
@@ -115,7 +115,7 @@ Also it is required to have Docker Compose configured:
 
 **Please note that ports 4444 and 8080 must be available for _localhost_ !!**
 
-##**2. Run Selenoid by using Docker on Windows**
+**2. Run Selenoid by using Docker on Windows**
 
 Locate and execute file: `.\docker\scripts\windows\startLocalSelenoid.bat` and after several minutes you should see in cmd window:
 
@@ -125,7 +125,7 @@ You can confirm that everything is OK by visiting http://localhost:8080/#/ where
 
 ![Alt text](https://github.com/VF-1S/SeleniumGrid/blob/main/images/ReadmeImages/Selenoid_up.png "Selenoid Up")
 
-##**3. Run Selenoid by using Docker on Linux**
+**3. Run Selenoid by using Docker on Linux**
 
 Locate and execute shell script: `./docker/scripts/linux/startSelenoid.sh` with _sudo_ permission and after a while you should see the same confirmation that containers up and running like fo Windows:
 
@@ -150,7 +150,7 @@ Locate and execute shell script: `./docker/scripts/linux/startSelenoid.sh` with 
     
  
 
-##**4. Selenoid custom Configuration**
+**4. Selenoid custom Configuration**
 
 - **Adding more images to Selenoid**
 
