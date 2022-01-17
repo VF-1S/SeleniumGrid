@@ -4,13 +4,13 @@
     {
       "browserName": "firefox",
       "marionette": true,
-	  "version":"92",
+	  "version":"96",
       "maxInstances": 5,
       "seleniumProtocol": "WebDriver"
     },
     {
       "browserName": "chrome",
-	  "version":"93",
+	  "version":"97",
       "maxInstances": 5,
       "seleniumProtocol": "WebDriver"
     },
@@ -22,7 +22,7 @@
     },
     {
       "browserName": "MicrosoftEdge",
-      "version": "93",
+      "version": "97",
       "maxInstances": 5,
       "seleniumProtocol": "WebDriver"
     }

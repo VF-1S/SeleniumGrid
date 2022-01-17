@@ -96,7 +96,7 @@ spec:
       serviceAccountName: moon-monitor
       containers:
         - name: moon-monitor
-          image: aerokube/moon-monitor:1.9.3
+          image: aerokube/moon-monitor:1.9.4
           args: ["-namespace", "moon"]
           ports:
             - name: metrics
